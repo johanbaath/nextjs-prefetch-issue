@@ -1,10 +1,12 @@
-import './globals.css'
+import { cookies } from "next/headers";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
+  const nextCookies = cookies();
+
   return (
     <html lang="en">
       {/*
@@ -14,5 +16,5 @@ export default function RootLayout({
       <head />
       <body>{children}</body>
     </html>
-  )
+  );
 }
